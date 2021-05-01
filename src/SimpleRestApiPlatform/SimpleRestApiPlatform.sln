@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform", "SimpleRestApiPlatform\SimpleRestApiPlatform.csproj", "{44AAA4B4-A7C5-4C30-AAA6-5C2DAABE1E82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Core", "SimpleRestApiPlatform.Core\SimpleRestApiPlatform.Core.csproj", "{B8C97597-A5F5-47DA-93F2-1D10CF26C87E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Infrastructure", "SimpleRestApiPlatform.Infrastructure\SimpleRestApiPlatform.Infrastructure.csproj", "{52094337-B8C5-4C76-BA0E-9B79563189AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.IntegrationTests", "..\..\test\SimpleRestApiPlatform.IntegrationTests\SimpleRestApiPlatform.IntegrationTests.csproj", "{502A5F2A-B537-4C34-9A2E-FDED34BA902A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Core.Tests", "..\..\test\SimpleRestApiPlatform.Core.Tests\SimpleRestApiPlatform.Core.Tests.csproj", "{D68C060E-CC24-4735-8A0D-248F088475A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Infrastructure.Tests", "..\..\test\SimpleRestApiPlatform.Infrastructure.Tests\SimpleRestApiPlatform.Infrastructure.Tests.csproj", "{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44AAA4B4-A7C5-4C30-AAA6-5C2DAABE1E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AAA4B4-A7C5-4C30-AAA6-5C2DAABE1E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AAA4B4-A7C5-4C30-AAA6-5C2DAABE1E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AAA4B4-A7C5-4C30-AAA6-5C2DAABE1E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C97597-A5F5-47DA-93F2-1D10CF26C87E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C97597-A5F5-47DA-93F2-1D10CF26C87E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C97597-A5F5-47DA-93F2-1D10CF26C87E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C97597-A5F5-47DA-93F2-1D10CF26C87E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52094337-B8C5-4C76-BA0E-9B79563189AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52094337-B8C5-4C76-BA0E-9B79563189AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52094337-B8C5-4C76-BA0E-9B79563189AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52094337-B8C5-4C76-BA0E-9B79563189AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{502A5F2A-B537-4C34-9A2E-FDED34BA902A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{502A5F2A-B537-4C34-9A2E-FDED34BA902A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{502A5F2A-B537-4C34-9A2E-FDED34BA902A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{502A5F2A-B537-4C34-9A2E-FDED34BA902A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68C060E-CC24-4735-8A0D-248F088475A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68C060E-CC24-4735-8A0D-248F088475A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68C060E-CC24-4735-8A0D-248F088475A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68C060E-CC24-4735-8A0D-248F088475A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16B76980-207A-455B-9A36-5424F1D3C122}
+	EndGlobalSection
+EndGlobal
