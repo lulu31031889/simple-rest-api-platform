@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "dc855f65-259a-4508-8258-887e10be385a",
+		"name": "simple-rest-api-platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HelloWorld",
+			"item": [
+				{
+					"name": "GET request to HelloWorld",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/helloworld",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"helloworld"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST request to HelloWorld",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/helloworld",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"helloworld"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RandomNumbers",
+			"item": [
+				{
+					"name": "GET request to retrieve random integer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/RandomNumbers/GetRandomInteger",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"RandomNumbers",
+								"GetRandomInteger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST request to retrieve random integer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/RandomNumbers/GetRandomInteger",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"RandomNumbers",
+								"GetRandomInteger"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
