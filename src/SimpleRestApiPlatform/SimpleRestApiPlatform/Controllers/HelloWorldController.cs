@@ -20,10 +20,9 @@ namespace SimpleRestApiPlatform.Controllers
         /// Just returns "Hello World!".
         /// </summary>
         /// <remarks>
-        /// Here's the request:
-        /// GET /
-        /// {
-        /// }
+        /// Sample request:
+        /// 
+        /// GET /api/HelloWorld
         /// </remarks>
         /// <returns>"Hello World!"</returns>
         /// <response code="200">Returns "Hello World!".</response>
