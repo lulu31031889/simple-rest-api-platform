@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform", "SimpleRestApiPlatform\SimpleRestApiPlatform.csproj", "{44AAA4B4-A7C5-4C30-AAA6-5C2DAABE1E82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleRestApiPlatform", "SimpleRestApiPlatform\SimpleRestApiPlatform.csproj", "{44AAA4B4-A7C5-4C30-AAA6-5C2DAABE1E82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Core", "SimpleRestApiPlatform.Core\SimpleRestApiPlatform.Core.csproj", "{B8C97597-A5F5-47DA-93F2-1D10CF26C87E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleRestApiPlatform.Core", "SimpleRestApiPlatform.Core\SimpleRestApiPlatform.Core.csproj", "{B8C97597-A5F5-47DA-93F2-1D10CF26C87E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Infrastructure", "SimpleRestApiPlatform.Infrastructure\SimpleRestApiPlatform.Infrastructure.csproj", "{52094337-B8C5-4C76-BA0E-9B79563189AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleRestApiPlatform.Infrastructure", "SimpleRestApiPlatform.Infrastructure\SimpleRestApiPlatform.Infrastructure.csproj", "{52094337-B8C5-4C76-BA0E-9B79563189AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.IntegrationTests", "..\..\test\SimpleRestApiPlatform.IntegrationTests\SimpleRestApiPlatform.IntegrationTests.csproj", "{502A5F2A-B537-4C34-9A2E-FDED34BA902A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleRestApiPlatform.IntegrationTests", "..\..\test\SimpleRestApiPlatform.IntegrationTests\SimpleRestApiPlatform.IntegrationTests.csproj", "{502A5F2A-B537-4C34-9A2E-FDED34BA902A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Core.Tests", "..\..\test\SimpleRestApiPlatform.Core.Tests\SimpleRestApiPlatform.Core.Tests.csproj", "{D68C060E-CC24-4735-8A0D-248F088475A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleRestApiPlatform.Core.Tests", "..\..\test\SimpleRestApiPlatform.Core.Tests\SimpleRestApiPlatform.Core.Tests.csproj", "{D68C060E-CC24-4735-8A0D-248F088475A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Infrastructure.Tests", "..\..\test\SimpleRestApiPlatform.Infrastructure.Tests\SimpleRestApiPlatform.Infrastructure.Tests.csproj", "{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleRestApiPlatform.Infrastructure.Tests", "..\..\test\SimpleRestApiPlatform.Infrastructure.Tests\SimpleRestApiPlatform.Infrastructure.Tests.csproj", "{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRestApiPlatform.Tests", "..\..\test\SimpleRestApiPlatform.Tests\SimpleRestApiPlatform.Tests.csproj", "{AE0D8C79-96ED-4A42-A896-42C8852437F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F07CA3FD-7B7E-4B11-BBC0-731768FFCE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0D8C79-96ED-4A42-A896-42C8852437F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0D8C79-96ED-4A42-A896-42C8852437F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0D8C79-96ED-4A42-A896-42C8852437F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0D8C79-96ED-4A42-A896-42C8852437F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
