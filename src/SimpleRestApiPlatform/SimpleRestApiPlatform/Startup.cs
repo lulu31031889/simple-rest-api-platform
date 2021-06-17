@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using SimpleRestApiPlatform.Core.Interfaces.Services;
+using SimpleRestApiPlatform.Infrastructure.Services;
 using System;
 using System.IO;
 using System.Reflection;
@@ -22,32 +24,11 @@ namespace SimpleRestApiPlatform
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                { 
-                    Title = "SimpleRestApiPlatform",
-                    Description = "A simple RESTful service to serve as a platform to help learn API testing.",
-                    Version = "v1",
-                    Contact = new OpenApiContact
-                    {
-                        Name = "lulu31031889",
-                        Url = new Uri("https://github.com/lulu31031889/simple-rest-api-platform"),
-                    },
-                    License = new OpenApiLicense
-                    {
-                        Name = "MIT License",
-                        Url=new Uri("https://github.com/lulu31031889/simple-rest-api-platform/blob/main/LICENSE")
-                    }
-                });
 
-                // Set the comments path for the Swagger JSON and UI.
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
-            });
+            ConfigureDependencyInjectedServices(services);
+
+            ConfigureSwaggerAndXmlDocumentation(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,6 +55,39 @@ namespace SimpleRestApiPlatform
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+        }
+
+        void ConfigureDependencyInjectedServices(IServiceCollection services)
+        {
+            services.AddTransient<IRandomNumberGeneratorService, RandomNumberGeneratorService>();
+        }
+
+        void ConfigureSwaggerAndXmlDocumentation(IServiceCollection services)
+        {
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "SimpleRestApiPlatform",
+                    Description = "A simple RESTful service to serve as a platform to help learn API testing.",
+                    Version = "v1",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "lulu31031889",
+                        Url = new Uri("https://github.com/lulu31031889/simple-rest-api-platform"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "MIT License",
+                        Url = new Uri("https://github.com/lulu31031889/simple-rest-api-platform/blob/main/LICENSE")
+                    }
+                });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
     }
