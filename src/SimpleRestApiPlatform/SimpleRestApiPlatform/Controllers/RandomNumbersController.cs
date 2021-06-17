@@ -58,11 +58,13 @@ namespace SimpleRestApiPlatform.Controllers
         /// <response code="200">Returns a single random integer.</response>
         /// <response code="400">Returns error and detail if one (or more) parameters was not an integer, empty, or out of range.</response>
         /// <response code="405">Returns 405 (Method Not Allowed) if you attempt any verb other than GET.</response>
+        /// /// <response code="422">Returns error if maximum is smaller value than minimum value.</response>
         [HttpGet("GetRandomIntegerBetweenTwoStringIntegerValues")]
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status405MethodNotAllowed)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status422UnprocessableEntity)]
         public IActionResult GetRandomInteger(string minimumValue, string maximumValue)
         {
             try
@@ -124,18 +126,36 @@ namespace SimpleRestApiPlatform.Controllers
         /// <param name="minimumValue">The lowest value for the random number (as a number e.g. -100).</param>
         /// <param name="maximumValue">The highest value for the random number (as a number e.g. 100).</param>
         /// <returns>A random integer between the "minimumValue" and "maximumValue".</returns>
+        /// <response code="200">Returns a single random integer.</response>
+        /// <response code="400">Returns error and detail if one (or more) parameters was not an integer, empty, or out of range.</response>
         /// <response code="405">Returns 405 (Method Not Allowed) if you attempt any verb other than GET.</response>
-        /// /// <response code="501">Indicates this endpoint has not yet been implemented.</response>
+        /// <response code="422">Returns error if maximum is smaller value than minimum value.</response>
         [HttpGet("GetRandomIntegerBetweenTwoNumericIntegerValues")]
         [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status405MethodNotAllowed)]
-        [ProducesResponseType(StatusCodes.Status501NotImplemented)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status422UnprocessableEntity)]
         public IActionResult GetRandomInteger(int minimumValue, int maximumValue)
         {
-            return Problem(detail: "The endpoint has not yet been implemented.  It will be implemented in a future release.",
-                    statusCode: 501,
-                    title: "Endpoint not currently implemented.",
-                    type: "Not implemented.");
+            try
+            {
+                return Ok(_randomNumberGeneratorService.GenerateRandomSigned32BitInteger(minimumValue, maximumValue));
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                return Problem(detail: "Minimum value greater than maximum value.",
+                    statusCode: 422,
+                    title: "Maximum value must be greater than minimum value.",
+                    type: e.GetType().ToString());
+            }
+            catch (Exception e)
+            {
+                return Problem(detail: e.Message,
+                    statusCode: 400,
+                    title: "There was an unknown issue.",
+                    type: e.GetType().ToString());
+            }
         }
     }
 }
