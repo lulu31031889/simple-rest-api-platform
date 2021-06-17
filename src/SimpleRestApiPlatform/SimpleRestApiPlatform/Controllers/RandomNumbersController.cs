@@ -72,6 +72,13 @@ namespace SimpleRestApiPlatform.Controllers
 
                 return Ok(_randomNumberGeneratorService.GenerateRandomSigned32BitInteger(minVal, maxVal));
             }
+            catch(ArgumentOutOfRangeException e)
+            {
+                return Problem(detail: "Minimum value greater than maximum value.",
+                    statusCode: 422,
+                    title: "Maximum value must be greater than minimum value.",
+                    type: e.GetType().ToString());
+            }
             catch (ArgumentException e)
             {
                 return Problem(detail: "One or more parameters might be empty.",
